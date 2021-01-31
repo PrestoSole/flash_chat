@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flash_chat/reusable_widgets.dart';
 import 'package:flash_chat/screens/login_screen.dart';
 import 'package:flash_chat/screens/registration_screen.dart';
@@ -48,11 +49,12 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               padding: const EdgeInsets.only(top: 50.0),
               child: ReusableLogo(mq: mq),
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 50.0, bottom: 50.0),
-              child: Text(
-                'Hello There!',
-                style: TextStyle(
+            Padding(
+              padding: const EdgeInsets.only(top: 50.0, bottom: 50.0),
+              child: TypewriterAnimatedTextKit(
+                isRepeatingAnimation: false,
+                text: const ['Hello There!'],
+                textStyle: const TextStyle(
                   color: Colors.white,
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
